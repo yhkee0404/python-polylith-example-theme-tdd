@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "poly-tdd"
+version = "0.1.0"
+description = ""
+authors = ["David Vujic"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "example/logging", from = "components/logging/src"}] 
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
